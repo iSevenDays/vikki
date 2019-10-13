@@ -1,0 +1,53 @@
+{
+  "name": "vikki",
+  "author": "MakeAwesomeHappen",
+  "version": "1.0.0",
+  "keywords": [
+    "pebble-app"
+  ],
+  "private": true,
+  "dependencies": {
+    
+  },
+  "pebble": {
+    "displayName": "vikki",
+    "uuid": "6d20336e-833f-428e-945d-7f6e583257c0",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "messageKeys": [
+      "dummy"
+    ],
+    "resources": {
+      "media": [
+	  {
+		  "file": "images/splash.png",
+		  "name": "IMAGES_SPLASH_PNG",
+		  "type": "bitmap"
+	  },
+	  {
+		  "file": "images/logo_splash.png",
+		  "name": "SIMPLY_IMAGE_LOGO_SPLASH",
+		  "type": "bitmap"
+	  },
+	  {
+		  "file": "images/tile_splash.png",
+		  "name": "SIMPLY_IMAGE_TILE_SPLASH",
+		  "type": "bitmap"
+	  },
+	  {
+		  "file": "fonts/UbuntuMono-Regular.ttf",
+		  "name": "SIMPLY_MONO_FONT_14",
+		  "type": "font"
+	  }
+	  ]
+    }
+  }
+}
