@@ -11,28 +11,28 @@
 #include "simply_window_stack.h"
 #include "simply_splash.h"
 
-static Window *s_window;
-static TextLayer *s_text_layer;
+//static Window *s_window;
+//static TextLayer *s_text_layer;
 
 // Dictation
-static DictationSession *s_dictation_session;
+//static DictationSession *s_dictation_session;
 // Declare a buffer for the DictationSession
-static char s_last_text[512];
+//static char s_last_text[512];
 
 /******************************* Dictation API ********************************/
-static void dictation_session_callback(DictationSession *session, DictationSessionStatus status,
-                                       char *transcription, void *context) {
-  if(status == DictationSessionStatusSuccess) {
-    // Display the dictated text
-    snprintf(s_last_text, sizeof(s_last_text), "Transcription:\n\n%s", transcription);
-    text_layer_set_text(s_text_layer, s_last_text);
-  } else {
-    // Display the reason for any error
-    static char s_failed_buff[128];
-    snprintf(s_failed_buff, sizeof(s_failed_buff), "Transcription failed.\n\nError ID:\n%d", (int)status);
-    text_layer_set_text(s_text_layer, s_failed_buff);
-  }
-}
+//static void dictation_session_callback(DictationSession *session, DictationSessionStatus status,
+//                                       char *transcription, void *context) {
+//  if(status == DictationSessionStatusSuccess) {
+//    // Display the dictated text
+//    snprintf(s_last_text, sizeof(s_last_text), "Transcription:\n\n%s", transcription);
+//    text_layer_set_text(s_text_layer, s_last_text);
+//  } else {
+//    // Display the reason for any error
+//    static char s_failed_buff[128];
+//    snprintf(s_failed_buff, sizeof(s_failed_buff), "Transcription failed.\n\nError ID:\n%d", (int)status);
+//    text_layer_set_text(s_text_layer, s_failed_buff);
+//  }
+//}
 /************************************ App *************************************/
 
 //static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
@@ -93,6 +93,13 @@ static void splash_after_load(Window *window) {
 //	simply_widow_
 }
 
+void after_splash_shown(void* data) {
+	Simply *simply = data;
+
+	simply_window_init(<#SimplyWindow *self#>, <#Simply *simply#>)
+	simply_window_stack_show(<#SimplyWindowStack *self#>, <#SimplyWindow *window#>, <#bool is_push#>)
+}
+
 int main(void) {
 	Simply *simply = malloc(sizeof(*simply));
 	simply->accel = simply_accel_create(simply);
@@ -105,20 +112,14 @@ int main(void) {
 	simply->ui = simply_ui_create(simply);
 	simply->window_stack = simply_window_stack_create(simply);
 
-	
-
 	simply_wakeup_init(simply);
 
 	bool animated = false;
 	window_stack_push(simply->splash->window, animated);
 
+	app_timer_register(1000, after_splash_shown, simply);
+
+
 	app_event_loop();
 	simply_destroy(simply);
-//
-//	init();
-//
-//	APP_LOG(APP_LOG_LEVEL_DEBUG, "Done initializing, pushed window: %p", s_window);
-//
-//	app_event_loop();
-//	deinit();
 }

@@ -50,6 +50,12 @@ struct SimplyUi {
   SimplyUiLayer ui_layer;
 };
 
+
+/// Creates a Simply UI
+/// 1. Initializes styles
+/// 2. Sets default white background
+/// 3. After 10 seconds calls 'show_welcome_text' or 'simply_msg_show_disconnected'
+/// @param simply Siimply instance
 SimplyUi *simply_ui_create(Simply *simply);
 void simply_ui_destroy(SimplyUi *self);
 

@@ -523,13 +523,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include";
+				HEADER_SEARCH_PATHS = (
+					"~/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
+					"src/**",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
@@ -595,7 +597,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include";
+				HEADER_SEARCH_PATHS = (
+					"~/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
+					"src/**",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -603,7 +608,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};

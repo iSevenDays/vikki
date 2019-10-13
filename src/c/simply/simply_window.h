@@ -33,11 +33,16 @@ struct SimplyWindow {
 #endif
 };
 
+
+/// Allocates Window, sets use_status_bar to false
+/// @param simply Simply instance
 SimplyWindow *simply_window_init(SimplyWindow *self, Simply *simply);
 void simply_window_deinit(SimplyWindow *self);
 void simply_window_show(SimplyWindow *self);
 void simply_window_hide(SimplyWindow *self);
 
+
+/// Allocates Window, sets clear background, adds window_handlers
 void simply_window_preload(SimplyWindow *self);
 void simply_window_load(SimplyWindow *self);
 void simply_window_unload(SimplyWindow *self);
