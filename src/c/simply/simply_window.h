@@ -33,6 +33,15 @@ struct SimplyWindow {
 #endif
 };
 
+typedef struct ClickPacket ClickPacket;
+
+struct __attribute__((__packed__)) ClickPacket {
+	Packet packet;
+	ButtonId button:8;
+};
+
+typedef ClickPacket LongClickPacket;
+
 
 /// Allocates Window, sets use_status_bar to false
 /// @param simply Simply instance

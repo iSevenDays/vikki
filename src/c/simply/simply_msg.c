@@ -438,25 +438,6 @@ static SimplyPacket *add_packet(SimplyMsg *self, Packet *buffer) {
 bool simply_msg_send_packet(Packet *packet) {
 	APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Will send packet type %d directly", packet->type);
 	if (s_msg->simply->is_local) {
-
-//		if (packet->type == CommandWindowShowEvent) {
-//			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Will override packet CommandWindowShowEvent to packet CommandWindowShow");
-//			WindowShowPacket windowShowPacket;
-//			windowShowPacket.packet = *packet;
-//			windowShowPacket.type = WindowTypeWindow;
-//			windowShowPacket.pushing = false;
-//			handle_packet(s_msg->simply, (Packet*) &windowShowPacket);
-//			return true;
-//		} else if (packet->type == CommandWindowHideEvent) {
-//			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Will override packet CommandWindowHideEvent to packet CommandWindowHide");
-//			WindowHidePacket windowHidePacket;
-//			WindowEventPacket *originalPacket = (WindowEventPacket*)packet;
-//			windowHidePacket.id = originalPacket->id;
-//			windowHidePacket.packet = *packet;
-//			handle_packet(s_msg->simply, (Packet*) &windowHidePacket);
-//			return true;
-//		}
-
 		handle_packet(s_msg->simply, packet);
 		return true;
 	}

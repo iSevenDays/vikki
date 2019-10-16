@@ -77,4 +77,13 @@ void simply_window_stack_back(SimplyWindowStack *self, SimplyWindow *window);
 void simply_window_stack_send_show(SimplyWindowStack *self, SimplyWindow *window);
 void simply_window_stack_send_hide(SimplyWindowStack *self, SimplyWindow *window);
 
+/**
+ Handles commands:
+ CommandWindowShow
+ CommandWindowHide
+
+ @param simply Simply instance
+ @param packet packet with the corresponding command
+ @return returns true if handles, false if not
+ */
 bool simply_window_stack_handle_packet(Simply *simply, Packet *packet);

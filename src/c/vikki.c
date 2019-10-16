@@ -16,7 +16,7 @@
 #include "simply_stage.h"
 #include "simply_window_stack.h"
 #include "simply_splash.h"
-
+#include "simply_msg_commands.h"
 
 
 //static Window *s_window;
@@ -130,6 +130,7 @@ void after_splash_shown(void* data) {
 	//window_single_click_subscribe(BUTTON_ID_SELECT, (ClickHandler) select_click_handler);
 
 	SimplyWindow *simplyWindow = &simply->ui->window;
+	simply_window_set_button(simplyWindow, BUTTON_ID_BACK, true);
 	Window *window = simplyWindow->window;
 	// Unregister the old click config provider
 	//window_set_click_config_provider_with_context(window, NULL, NULL);
@@ -144,13 +145,30 @@ void after_splash_shown(void* data) {
 }
 //#error test error
 bool handle_command(Simply *simply, Packet *packet) {
+	APP_LOG(APP_LOG_LEVEL_DEBUG, "Got packet type %d", packet->type);
 	switch (packet->type) {
-		case CommandWindowHideEvent:
-			//WindowHideEventPacket p;
-			//WindowHideEventPacket *cpacket = (WindowHideEventPacket*) &packet;
+		case CommandClick: {
+
+			ClickPacket *cpacket = (ClickPacket *) packet;
+			APP_LOG(APP_LOG_LEVEL_DEBUG, "Got button id %d", cpacket->button);
+			switch (cpacket->button) {
+				case BUTTON_ID_BACK: {
+					APP_LOG(APP_LOG_LEVEL_DEBUG, "Will hide top window by back button");
+					WindowHidePacket packet = {
+						.packet.type = CommandWindowHide,
+						.packet.length = sizeof(packet),
+						.id = simply_window_stack_get_top_window(simply)->id,
+					};
+					simply_window_stack_handle_packet(simply, (Packet *) &packet);
+				}
+				default:
+					break;
+			}
 
 			return true;
+		}
 		default:
+			APP_LOG(APP_LOG_LEVEL_DEBUG, "Got unhandled packet type %d", packet->type);
 			return false;
 	}
 }

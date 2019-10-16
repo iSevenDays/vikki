@@ -51,15 +51,6 @@ struct __attribute__((__packed__)) WindowActionBarPacket {
   bool action;
 };
 
-typedef struct ClickPacket ClickPacket;
-
-struct __attribute__((__packed__)) ClickPacket {
-  Packet packet;
-  ButtonId button:8;
-};
-
-typedef ClickPacket LongClickPacket;
-
 
 static GColor8 s_button_palette[] = { { GColorWhiteARGB8 }, { GColorClearARGB8 } };
 
