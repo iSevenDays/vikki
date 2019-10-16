@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		144005CE235324530066812F /* simply_voice.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005B5235324520066812F /* simply_voice.c */; };
-		144005CF235324530066812F /* simply_splash.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005B8235324520066812F /* simply_splash.c */; };
-		144005D0235324530066812F /* simply_window.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005BA235324520066812F /* simply_window.c */; };
-		144005D1235324530066812F /* simply_menu.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005BD235324520066812F /* simply_menu.c */; };
-		144005D2235324530066812F /* simply_wakeup.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C0235324520066812F /* simply_wakeup.c */; };
-		144005D3235324530066812F /* simply.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C1235324520066812F /* simply.c */; };
-		144005D4235324530066812F /* simply_stage.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C3235324520066812F /* simply_stage.c */; };
-		144005D5235324530066812F /* simply_msg.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C5235324520066812F /* simply_msg.c */; };
-		144005D6235324530066812F /* simply_ui.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C6235324520066812F /* simply_ui.c */; };
-		144005D7235324530066812F /* simply_accel.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C7235324520066812F /* simply_accel.c */; };
-		144005D8235324530066812F /* simply_res.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005CB235324530066812F /* simply_res.c */; };
-		144005D9235324530066812F /* simply_window_stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005CC235324530066812F /* simply_window_stack.c */; };
+		1401DC6A235734AE00236F4B /* simply_accel.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C7235324520066812F /* simply_accel.c */; };
+		1401DC6B235734AE00236F4B /* simply_menu.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005BD235324520066812F /* simply_menu.c */; };
+		1401DC6C235734AE00236F4B /* simply_msg.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C5235324520066812F /* simply_msg.c */; };
+		1401DC6D235734AE00236F4B /* simply_res.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005CB235324530066812F /* simply_res.c */; };
+		1401DC6E235734AE00236F4B /* simply_splash.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005B8235324520066812F /* simply_splash.c */; };
+		1401DC6F235734AE00236F4B /* simply_stage.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C3235324520066812F /* simply_stage.c */; };
+		1401DC70235734AE00236F4B /* simply_ui.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C6235324520066812F /* simply_ui.c */; };
+		1401DC71235734AE00236F4B /* simply_voice.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005B5235324520066812F /* simply_voice.c */; };
+		1401DC72235734AE00236F4B /* simply_wakeup.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C0235324520066812F /* simply_wakeup.c */; };
+		1401DC73235734AE00236F4B /* simply_window_stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005CC235324530066812F /* simply_window_stack.c */; };
+		1401DC74235734AE00236F4B /* simply_window.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005BA235324520066812F /* simply_window.c */; };
+		1401DC75235734AE00236F4B /* simply.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C1235324520066812F /* simply.c */; };
 		14469901234BF6F8000FA536 /* assert_module_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 14469900234BF6F8000FA536 /* assert_module_test.c */; };
 		14469907234BF907000FA536 /* allocate_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 14469906234BF907000FA536 /* allocate_module.c */; };
 		1446990A234BF9FC000FA536 /* libcmocka.0.7.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 14469909234BF9FC000FA536 /* libcmocka.0.7.0.dylib */; };
@@ -109,24 +109,24 @@
 		14469910234D1C97000FA536 /* date_parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = date_parser.h; path = src/c/date_parser.h; sourceTree = SOURCE_ROOT; };
 		14469911234D1C97000FA536 /* date_parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = date_parser.c; path = src/c/date_parser.c; sourceTree = SOURCE_ROOT; };
 		14469915234D1EA9000FA536 /* date_parser_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = date_parser_test.c; sourceTree = "<group>"; };
-		14AD4233234E586000EE2E9A /* string_helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = string_helpers.h; path = c/string_helpers.h; sourceTree = "<group>"; };
-		14AD4234234E586000EE2E9A /* string_helpers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = string_helpers.c; path = c/string_helpers.c; sourceTree = "<group>"; };
+		14AD4233234E586000EE2E9A /* string_helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = string_helpers.h; sourceTree = "<group>"; };
+		14AD4234234E586000EE2E9A /* string_helpers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = string_helpers.c; sourceTree = "<group>"; };
 		14AD4237234E596B00EE2E9A /* string_helpers_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = string_helpers_test.c; sourceTree = "<group>"; };
 		14AD423A234E597800EE2E9A /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		14AD423B234E597800EE2E9A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		14AD423E234E5ACD00EE2E9A /* date_parser_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = date_parser_test.h; sourceTree = "<group>"; };
 		14AD423F234E5CB800EE2E9A /* string_helpers_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = string_helpers_test.h; sourceTree = "<group>"; };
-		14AD4244234E667000EE2E9A /* event_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = event_info.h; path = c/event_info.h; sourceTree = "<group>"; };
-		14AD4245234E667C00EE2E9A /* fabric_event_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fabric_event_info.h; path = c/fabric_event_info.h; sourceTree = "<group>"; };
-		14AD4246234E667C00EE2E9A /* fabric_event_info.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fabric_event_info.c; path = c/fabric_event_info.c; sourceTree = "<group>"; };
-		14AD4249234E83E000EE2E9A /* timedef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = timedef.h; path = c/timedef.h; sourceTree = "<group>"; };
-		14AD424A234E844C00EE2E9A /* vikki.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vikki.h; path = c/vikki.h; sourceTree = "<group>"; };
-		14E0E17E2351193900661CC9 /* tiny_sscanf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tiny_sscanf.h; path = c/tiny_sscanf.h; sourceTree = "<group>"; };
-		14E0E17F2351193900661CC9 /* tiny_sscanf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = tiny_sscanf.c; path = c/tiny_sscanf.c; sourceTree = "<group>"; };
-		14E0E18523511F0200661CC9 /* uicard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = uicard.h; path = c/uicard.h; sourceTree = "<group>"; };
-		14E0E186235120A800661CC9 /* factory_card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = factory_card.h; path = c/factory_card.h; sourceTree = "<group>"; };
-		14E0E187235120A800661CC9 /* factory_card.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = factory_card.c; path = c/factory_card.c; sourceTree = "<group>"; };
-		4969414FD76515E5DE32AD0D /* vikki.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = vikki.c; path = c/vikki.c; sourceTree = "<group>"; };
+		14AD4244234E667000EE2E9A /* event_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = event_info.h; sourceTree = "<group>"; };
+		14AD4245234E667C00EE2E9A /* fabric_event_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fabric_event_info.h; sourceTree = "<group>"; };
+		14AD4246234E667C00EE2E9A /* fabric_event_info.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fabric_event_info.c; sourceTree = "<group>"; };
+		14AD4249234E83E000EE2E9A /* timedef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = timedef.h; sourceTree = "<group>"; };
+		14AD424A234E844C00EE2E9A /* vikki.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vikki.h; sourceTree = "<group>"; };
+		14E0E17E2351193900661CC9 /* tiny_sscanf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tiny_sscanf.h; sourceTree = "<group>"; };
+		14E0E17F2351193900661CC9 /* tiny_sscanf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tiny_sscanf.c; sourceTree = "<group>"; };
+		14E0E18523511F0200661CC9 /* uicard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uicard.h; sourceTree = "<group>"; };
+		14E0E186235120A800661CC9 /* factory_card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = factory_card.h; sourceTree = "<group>"; };
+		14E0E187235120A800661CC9 /* factory_card.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = factory_card.c; sourceTree = "<group>"; };
+		4969414FD76515E5DE32AD0D /* vikki.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = vikki.c; sourceTree = "<group>"; };
 		7459CBCE41250CEF3A045B3A /* package.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		A9120B7B12BE5EDBF335F21C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -180,8 +180,7 @@
 				144005C1235324520066812F /* simply.c */,
 				144005BB235324520066812F /* simply.h */,
 			);
-			name = simply;
-			path = c/simply;
+			path = simply;
 			sourceTree = "<group>";
 		};
 		144005DA235324570066812F /* util */ = {
@@ -244,7 +243,15 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		42A5697B0A5AC894ADA11C05 /* sources */ = {
+		1477968423572D800090FC67 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				42A5697B0A5AC894ADA11C05 /* c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		42A5697B0A5AC894ADA11C05 /* c */ = {
 			isa = PBXGroup;
 			children = (
 				144005DA235324570066812F /* util */,
@@ -265,8 +272,7 @@
 				14E0E186235120A800661CC9 /* factory_card.h */,
 				14E0E187235120A800661CC9 /* factory_card.c */,
 			);
-			name = sources;
-			path = src;
+			path = c;
 			sourceTree = "<group>";
 		};
 		E1768CB771E5631BC085ABB7 /* Products */ = {
@@ -283,7 +289,7 @@
 			children = (
 				144698FF234BF6F8000FA536 /* Unit Tests */,
 				E1768CB771E5631BC085ABB7 /* Products */,
-				42A5697B0A5AC894ADA11C05 /* sources */,
+				1477968423572D800090FC67 /* src */,
 				7459CBCE41250CEF3A045B3A /* package.json */,
 				144D6084234AB019003E2FEA /* Recovered References */,
 				14469908234BF9FC000FA536 /* Frameworks */,
@@ -293,6 +299,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
+		14E351802354D81700CAC4B4 /* Pebble clean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "clean --pebble_sdk=~/pebble-dev/pebble-sdk-4.5-mac";
+			buildConfigurationList = 14E351812354D81700CAC4B4 /* Build configuration list for PBXLegacyTarget "Pebble clean" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/pebblex;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "Pebble clean";
+			passBuildSettingsInEnvironment = 0;
+			productName = Pebble;
+		};
 		AB4593F1B726CD56D12531F7 /* Pebble */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "build --pebble_sdk=~/pebble-dev/pebble-sdk-4.5-mac";
@@ -374,6 +394,7 @@
 				AB4593F1B726CD56D12531F7 /* Pebble */,
 				36F3342EF5410378B72A9D58 /* fake-iOS-target */,
 				144698FD234BF6F8000FA536 /* Unit Tests */,
+				14E351802354D81700CAC4B4 /* Pebble clean */,
 			);
 		};
 /* End PBXProject section */
@@ -412,24 +433,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1401DC74235734AE00236F4B /* simply_window.c in Sources */,
+				1401DC73235734AE00236F4B /* simply_window_stack.c in Sources */,
+				1401DC71235734AE00236F4B /* simply_voice.c in Sources */,
+				1401DC6D235734AE00236F4B /* simply_res.c in Sources */,
+				1401DC6B235734AE00236F4B /* simply_menu.c in Sources */,
 				14E0E188235120A800661CC9 /* factory_card.c in Sources */,
-				144005D0235324530066812F /* simply_window.c in Sources */,
 				14AD4251234E9DFE00EE2E9A /* date_parser.c in Sources */,
-				144005D5235324530066812F /* simply_msg.c in Sources */,
-				144005D8235324530066812F /* simply_res.c in Sources */,
-				144005D3235324530066812F /* simply.c in Sources */,
-				144005D4235324530066812F /* simply_stage.c in Sources */,
-				144005CE235324530066812F /* simply_voice.c in Sources */,
-				144005D6235324530066812F /* simply_ui.c in Sources */,
+				1401DC75235734AE00236F4B /* simply.c in Sources */,
+				1401DC6F235734AE00236F4B /* simply_stage.c in Sources */,
+				1401DC6A235734AE00236F4B /* simply_accel.c in Sources */,
+				1401DC72235734AE00236F4B /* simply_wakeup.c in Sources */,
+				1401DC70235734AE00236F4B /* simply_ui.c in Sources */,
 				14AD4247234E667C00EE2E9A /* fabric_event_info.c in Sources */,
-				144005D1235324530066812F /* simply_menu.c in Sources */,
-				144005CF235324530066812F /* simply_splash.c in Sources */,
 				14AD4235234E586000EE2E9A /* string_helpers.c in Sources */,
-				144005D9235324530066812F /* simply_window_stack.c in Sources */,
+				1401DC6C235734AE00236F4B /* simply_msg.c in Sources */,
+				1401DC6E235734AE00236F4B /* simply_splash.c in Sources */,
 				14AD4250234E9B9300EE2E9A /* vikki.c in Sources */,
-				144005D2235324530066812F /* simply_wakeup.c in Sources */,
 				14E0E1802351193900661CC9 /* tiny_sscanf.c in Sources */,
-				144005D7235324530066812F /* simply_accel.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +500,32 @@
 			};
 			name = Release;
 		};
+		14E351822354D81700CAC4B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		14E351832354D81700CAC4B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
 		1E666026979917DF146510C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -524,8 +571,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"~/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
-					"src/**",
+					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
+					"src/c/**",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -598,8 +645,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"~/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
-					"src/**",
+					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
+					"src/c/**",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -643,6 +690,15 @@
 			buildConfigurations = (
 				14469902234BF6F8000FA536 /* Debug */,
 				14469903234BF6F8000FA536 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14E351812354D81700CAC4B4 /* Build configuration list for PBXLegacyTarget "Pebble clean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E351822354D81700CAC4B4 /* Release */,
+				14E351832354D81700CAC4B4 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

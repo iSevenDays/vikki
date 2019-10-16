@@ -48,6 +48,7 @@ typedef struct SimplyUi SimplyUi;
 struct SimplyUi {
   SimplyWindow window;
   SimplyUiLayer ui_layer;
+	bool enable_logs;
 };
 
 
@@ -56,6 +57,7 @@ struct SimplyUi {
 /// 2. Sets default white background
 /// 3. After 10 seconds calls 'show_welcome_text' or 'simply_msg_show_disconnected'
 /// @param simply Siimply instance
+SimplyUi *simply_ui_create_with_logging(Simply *simply, bool enable_logs);
 SimplyUi *simply_ui_create(Simply *simply);
 void simply_ui_destroy(SimplyUi *self);
 

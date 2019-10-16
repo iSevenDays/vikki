@@ -12,42 +12,11 @@
 
 #include <pebble.h>
 
-typedef enum WindowType WindowType;
-
-enum WindowType {
-  WindowTypeWindow = 0,
-  WindowTypeMenu,
-  WindowTypeCard,
-  WindowTypeLast,
-};
-
-typedef struct WindowShowPacket WindowShowPacket;
-
-struct __attribute__((__packed__)) WindowShowPacket {
-  Packet packet;
-  WindowType type:8;
-  bool pushing;
-};
-
-typedef struct WindowSignalPacket WindowSignalPacket;
-
-struct __attribute__((__packed__)) WindowSignalPacket {
-  Packet packet;
-  uint32_t id;
-};
-
-typedef WindowSignalPacket WindowHidePacket;
-
-typedef WindowHidePacket WindowEventPacket;
-
-typedef WindowEventPacket WindowShowEventPacket;
-
-typedef WindowEventPacket WindowHideEventPacket;
-
 static bool s_broadcast_window = true;
 
 static bool send_window(SimplyMsg *self, Command type, uint32_t id) {
   if (!s_broadcast_window) {
+		APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Wil not send window event packet: not a broadcast window");
     return false;
   }
   WindowEventPacket packet = {

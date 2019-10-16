@@ -117,6 +117,13 @@ void initialize_styles(void) {
 }
 
 static void mark_dirty(SimplyUi *self) {
+	if (self->enable_logs) {
+		if (self->ui_layer.layer) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Will mark dirty self->ui_layer.layer");
+		} else {
+			APP_LOG(APP_LOG_LEVEL_WARNING, "Will not mark dirty self->ui_layer.layer, it is NULL");
+		}
+	}
   if (self->ui_layer.layer) {
     layer_mark_dirty(self->ui_layer.layer);
   }
@@ -155,6 +162,13 @@ void simply_ui_set_style(SimplyUi *self, int style_index) {
 
 void simply_ui_set_text(SimplyUi *self, SimplyUiTextfieldId textfield_id, const char *str) {
   SimplyUiTextfield *textfield = &self->ui_layer.textfields[textfield_id];
+	if (self->enable_logs) {
+		if (textfield == NULL) {
+			APP_LOG(APP_LOG_LEVEL_ERROR, "Will not set textfield str %s because textfield %d is NULL", str, textfield_id);
+		} else {
+			APP_LOG(APP_LOG_LEVEL_DEBUG, "Will set textfield str %s for textfield %d", str, textfield_id);
+		}
+	}
   char **str_field = &textfield->text;
   strset_truncated(str_field, str);
   mark_dirty(self);
@@ -380,6 +394,10 @@ static void show_welcome_text(SimplyUi *self) {
     return;
   }
 
+	if (self->enable_logs) {
+		APP_LOG(APP_LOG_LEVEL_INFO, "Will show disconnected UI, reason: not communicated and not local");
+	}
+
   simply_msg_show_disconnected(self->window.simply->msg);
 }
 
@@ -402,6 +420,7 @@ static void window_load(Window *window) {
 }
 
 static void window_appear(Window *window) {
+	APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Simply UI appear");
   SimplyUi *self = window_get_user_data(window);
   simply_window_appear(&self->window);
 }
@@ -472,10 +491,10 @@ bool simply_ui_handle_packet(Simply *simply, Packet *packet) {
   return false;
 }
 
-SimplyUi *simply_ui_create(Simply *simply) {
+SimplyUi *simply_ui_create_with_logging(Simply *simply, bool enable_logs) {
   initialize_styles();
   SimplyUi *self = malloc(sizeof(*self));
-  *self = (SimplyUi) { .window.layer = NULL };
+  *self = (SimplyUi) { .window.layer = NULL, .enable_logs = enable_logs };
 
   static const WindowHandlers s_window_handlers = {
     .load = window_load,
@@ -491,6 +510,11 @@ SimplyUi *simply_ui_create(Simply *simply) {
   app_timer_register(10000, (AppTimerCallback) show_welcome_text, self);
 
   return self;
+}
+
+
+SimplyUi *simply_ui_create(Simply *simply) {
+	return simply_ui_create_with_logging(simply, false);
 }
 
 void simply_ui_destroy(SimplyUi *self) {

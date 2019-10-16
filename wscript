@@ -25,6 +25,7 @@ def configure(ctx):
                       '-Wno-address',
                       '-Wno-type-limits',
                       '-Wno-missing-field-initializers',
+                      #'-I/Users/seven/projects/pebble-apps/vikki/src/c/simply']
                       '-I../src/c/simply']
     ctx.load('pebble_sdk')
     for _, env in ctx.all_envs.iteritems():

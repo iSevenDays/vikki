@@ -19,6 +19,37 @@ struct SimplyWindowStack {
   bool is_hiding:1;
 };
 
+typedef enum WindowType WindowType;
+
+enum WindowType {
+  WindowTypeWindow = 0,
+  WindowTypeMenu,
+  WindowTypeCard,
+  WindowTypeLast,
+};
+
+typedef struct WindowShowPacket WindowShowPacket;
+
+struct __attribute__((__packed__)) WindowShowPacket {
+  Packet packet;
+  WindowType type:8;
+  bool pushing;
+};
+
+typedef struct WindowSignalPacket WindowSignalPacket;
+
+struct __attribute__((__packed__)) WindowSignalPacket {
+  Packet packet;
+  uint32_t id;
+};
+
+typedef WindowSignalPacket WindowHidePacket;
+
+typedef WindowHidePacket WindowEventPacket;
+
+typedef WindowEventPacket WindowShowEventPacket;
+
+typedef WindowEventPacket WindowHideEventPacket;
 
 /// Allocates SimplyWindowStack and sets its 'simply' property to the provided argument
 /// @param simply Simply instance
@@ -33,7 +64,10 @@ bool simply_window_stack_set_broadcast(bool broadcast);
 SimplyWindow *simply_window_stack_get_top_window(Simply *simply);
 
 
-/// Push window
+/// @discussion Push the window. If you need to dismiss the default splash screen, use the following code to dismiss the splash screen and to show default simply ui window
+/// @code
+/// simply_window_stack_show(simply->window_stack, &simply->ui->window, false);
+/// @endcode 
 /// @param window SimplyWindow instance
 /// @param is_push ignored for SDK 3
 void simply_window_stack_show(SimplyWindowStack *self, SimplyWindow *window, bool is_push);

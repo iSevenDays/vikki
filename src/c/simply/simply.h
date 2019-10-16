@@ -2,6 +2,8 @@
 
 #define LOG(...) APP_LOG(APP_LOG_LEVEL_DEBUG, __VA_ARGS__)
 
+#include <stdbool.h>
+
 typedef struct Simply Simply;
 
 struct Simply {
@@ -11,6 +13,7 @@ struct Simply {
   struct SimplyMsg *msg;
   struct SimplyWindowStack *window_stack;
   struct SimplySplash *splash;
+	bool is_local; // disables simply_msg
   union {
     struct {
       struct SimplyStage *stage;

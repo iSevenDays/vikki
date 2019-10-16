@@ -196,15 +196,52 @@ static bool simply_base_handle_packet(Simply *simply, Packet *packet) {
 }
 
 static void handle_packet(Simply *simply, Packet *packet) {
-  if (simply_base_handle_packet(simply, packet)) { return; }
-  if (simply_wakeup_handle_packet(simply, packet)) { return; }
-  if (simply_window_stack_handle_packet(simply, packet)) { return; }
-  if (simply_window_handle_packet(simply, packet)) { return; }
-  if (simply_ui_handle_packet(simply, packet)) { return; }
-  if (simply_accel_handle_packet(simply, packet)) { return; }
-  if (simply_voice_handle_packet(simply, packet)) { return; }
-  if (simply_menu_handle_packet(simply, packet)) { return; }
-  if (simply_stage_handle_packet(simply, packet)) { return; }
+	bool enable_logs = simply->msg->enable_logs;
+	if (simply_base_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by base");
+		}
+	} else if (simply_wakeup_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by wakeup");
+		}
+	} else if (simply_window_stack_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by window_stack");
+		}
+	} else if (simply_window_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by window");
+		}
+	} else if (simply_ui_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by ui");
+		}
+	} else if (simply_accel_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by accel");
+		}
+	} else if (simply_voice_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by voice");
+		}
+	} else if (simply_menu_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by menu");
+		}
+	} else if (simply_stage_handle_packet(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by stage");
+		}
+	} else if (simply->msg->packetHandler != NULL && simply->msg->packetHandler(simply, packet)) {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "handled msg packet by packetHandler");
+		}
+	} else {
+		if (enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_ERROR, "NOT handled msg packet type %d", packet->type);
+		}
+	}
 }
 
 static void received_callback(DictionaryIterator *iter, void *context) {
@@ -249,6 +286,9 @@ static void failed_callback(DictionaryIterator *iter, AppMessageResult reason, v
 
   if (reason == APP_MSG_NOT_CONNECTED) {
     s_has_communicated = false;
+		if (simply->msg->enable_logs) {
+			APP_LOG(APP_LOG_LEVEL_ERROR, "Error: failed callback, reason APP_MSG_NOT_CONNECTED");
+		}
 
     simply_msg_show_disconnected(simply->msg);
   }
@@ -275,10 +315,13 @@ SimplyMsg *simply_msg_create(Simply *simply) {
   }
 
   SimplyMsg *self = malloc(sizeof(*self));
-  *self = (SimplyMsg) { .simply = simply };
+  *self = (SimplyMsg) { .simply = simply, .enable_logs = true };
   s_msg = self;
 
   simply->msg = self;
+	if (simply->is_local) {
+		s_has_communicated = true;
+	}
 
   app_message_open(APP_MSG_SIZE_INBOUND, APP_MSG_SIZE_OUTBOUND);
 
@@ -305,6 +348,10 @@ void simply_msg_destroy(SimplyMsg *self) {
 }
 
 static bool send_msg(uint8_t *buffer, size_t length) {
+	if (s_msg != NULL && s_msg->enable_logs && s_msg->simply->is_local) {
+		APP_LOG(APP_LOG_LEVEL_ERROR, "Error: should not process send_msg when is_local");
+		return false;
+	}
   DictionaryIterator *iter = NULL;
   if (app_message_outbox_begin(&iter) != APP_MSG_OK) {
     return false;
@@ -389,10 +436,38 @@ static SimplyPacket *add_packet(SimplyMsg *self, Packet *buffer) {
 }
 
 bool simply_msg_send_packet(Packet *packet) {
+	APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Will send packet type %d directly", packet->type);
+	if (s_msg->simply->is_local) {
+
+//		if (packet->type == CommandWindowShowEvent) {
+//			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Will override packet CommandWindowShowEvent to packet CommandWindowShow");
+//			WindowShowPacket windowShowPacket;
+//			windowShowPacket.packet = *packet;
+//			windowShowPacket.type = WindowTypeWindow;
+//			windowShowPacket.pushing = false;
+//			handle_packet(s_msg->simply, (Packet*) &windowShowPacket);
+//			return true;
+//		} else if (packet->type == CommandWindowHideEvent) {
+//			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Will override packet CommandWindowHideEvent to packet CommandWindowHide");
+//			WindowHidePacket windowHidePacket;
+//			WindowEventPacket *originalPacket = (WindowEventPacket*)packet;
+//			windowHidePacket.id = originalPacket->id;
+//			windowHidePacket.packet = *packet;
+//			handle_packet(s_msg->simply, (Packet*) &windowHidePacket);
+//			return true;
+//		}
+
+		handle_packet(s_msg->simply, packet);
+		return true;
+	}
   Packet *copy = malloc(packet->length);
   if (!copy) {
     return false;
   }
   memcpy(copy, packet, packet->length);
   return add_packet(s_msg, copy);
+}
+
+void simply_set_msg_packet_handler(SimplyMsg *self, PacketHandler handler) {
+	self->packetHandler = handler;
 }

@@ -49,6 +49,10 @@ void simply_window_unload(SimplyWindow *self);
 bool simply_window_appear(SimplyWindow *self);
 bool simply_window_disappear(SimplyWindow *self);
 
+
+/// Back button handler. If pressed and window is not showing - sends CommandWindowHideEvent
+/// @param recognizer click recognizer
+/// @param context context
 void simply_window_single_click_handler(ClickRecognizerRef recognizer, void *context);
 
 void simply_window_set_scrollable(SimplyWindow *self, bool is_scrollable, bool is_paging,
@@ -58,7 +62,19 @@ void simply_window_set_background_color(SimplyWindow *self, GColor8 background_c
 
 void simply_window_set_button(SimplyWindow *self, ButtonId button, bool enable);
 
+
+/// @discussion Enable or disable action bar. Usage:
+/// @code
+/// simply_window_set_action_bar(&simply->ui->window, true);
+/// @endcode
+/// @param is_action_bar true if action bar is active, false if not
 void simply_window_set_action_bar(SimplyWindow *self, bool is_action_bar);
+
+/// @discussion Set action bar icon. Automatically calls simply_window_set_action_bar(true). Usage:
+/// @code
+/// simply_window_set_action_bar_icon(&simply->ui->window, BUTTON_ID_SELECT, RESOURCE_ID_IMAGE_MIC);
+/// @endcode
+/// @param button Button ientifier like BUTTON_ID_SELECT
 void simply_window_set_action_bar_icon(SimplyWindow *self, ButtonId button, uint32_t id);
 void simply_window_set_action_bar_background_color(SimplyWindow *self, GColor8 background_color);
 void simply_window_action_bar_clear(SimplyWindow *self);

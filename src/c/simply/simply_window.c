@@ -258,6 +258,9 @@ void simply_window_single_click_handler(ClickRecognizerRef recognizer, void *con
   ButtonId button = click_recognizer_get_button_id(recognizer);
   bool is_enabled = (self->button_mask & (1 << button));
   if (button == BUTTON_ID_BACK) {
+		if (self->simply->is_local) {
+			APP_LOG(APP_LOG_LEVEL_DEBUG_VERBOSE, "Got back button click, has communicated: %d, is_enabled: %d", simply_msg_has_communicated(), is_enabled);
+		}
     if (!simply_msg_has_communicated()) {
       bool animated = true;
       window_stack_pop(animated);
@@ -333,7 +336,7 @@ bool simply_window_appear(SimplyWindow *self) {
   if (!self->id) {
     return false;
   }
-  if (simply_msg_has_communicated()) {
+  if (simply_msg_has_communicated() /*|| self->simply->is_local*/) {
     simply_window_stack_send_show(self->simply->window_stack, self);
   }
   return true;
@@ -347,7 +350,7 @@ bool simply_window_disappear(SimplyWindow *self) {
   if (simply_voice_dictation_in_progress()) {
     return false;
   }
-  if (simply_msg_has_communicated()) {
+  if (simply_msg_has_communicated()/* || self->simply->is_local*/) {
     simply_window_stack_send_hide(self->simply->window_stack, self);
   }
 

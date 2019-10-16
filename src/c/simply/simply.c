@@ -13,6 +13,7 @@
 
 #include <pebble.h>
 
+
 Simply *simply_create(void) {
   Simply *simply = malloc(sizeof(*simply));
   simply->accel = simply_accel_create(simply);

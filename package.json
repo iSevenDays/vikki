@@ -46,6 +46,11 @@
 		  "file": "fonts/UbuntuMono-Regular.ttf",
 		  "name": "SIMPLY_MONO_FONT_14",
 		  "type": "font"
+	  },
+		{
+		  "file": "images/mic.png",
+		  "name": "IMAGE_MIC",
+		  "type": "bitmap"
 	  }
 	  ]
     }
