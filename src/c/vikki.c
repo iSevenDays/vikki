@@ -112,7 +112,7 @@ void after_splash_shown(void* data) {
 	simply_ui_set_text_color(simply->ui, UiSubtitle, GColor8Black);
 	simply_ui_set_text(simply->ui, UiSubtitle, "Vikki");
 	simply_ui_set_text(simply->ui, UiBody, "Нажмите центральную кнопку и скажите");
-
+	
 	// Setup microphone UI
 	simply_window_set_action_bar_icon(&simply->ui->window, BUTTON_ID_SELECT, RESOURCE_ID_IMAGE_MIC);
 

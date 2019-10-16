@@ -415,6 +415,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E849022357704800478647 /* simply_window_stack.c in Sources */,
+				14E849032357704800478647 /* simply_window.c in Sources */,
+				14E848FE2357704800478647 /* simply_stage.c in Sources */,
+				14E848FA2357704800478647 /* simply_menu.c in Sources */,
+				14E849002357704800478647 /* simply_voice.c in Sources */,
+				14E848FF2357704800478647 /* simply_ui.c in Sources */,
+				14E849052357704800478647 /* date_parser.c in Sources */,
+				14E849092357704800478647 /* factory_card.c in Sources */,
+				14E848F92357704800478647 /* simply_accel.c in Sources */,
+				14E848F72357701400478647 /* vikki.c in Sources */,
+				14E848FB2357704800478647 /* simply_msg.c in Sources */,
+				14E849062357704800478647 /* string_helpers.c in Sources */,
+				14E849082357704800478647 /* tiny_sscanf.c in Sources */,
+				14E848FD2357704800478647 /* simply_splash.c in Sources */,
+				14E849012357704800478647 /* simply_wakeup.c in Sources */,
+				14E849042357704800478647 /* simply.c in Sources */,
+				14E848FC2357704800478647 /* simply_res.c in Sources */,
+				145573CA2357672F00DFCC60 /* main.m in Sources */,
+				14E849072357704800478647 /* fabric_event_info.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,9 +554,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
+					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include/**",
 					"src/c/**",
-					"$(SRCROOT)/**",
+					"build/include/**",
+					"build/basalt/src/**",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -610,9 +630,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
+					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include/**",
 					"src/c/**",
-					"$(SRCROOT)/**",
+					"build/include/**",
+					"build/basalt/src/**",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
