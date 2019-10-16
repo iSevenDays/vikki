@@ -7,18 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1401DC6A235734AE00236F4B /* simply_accel.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C7235324520066812F /* simply_accel.c */; };
-		1401DC6B235734AE00236F4B /* simply_menu.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005BD235324520066812F /* simply_menu.c */; };
-		1401DC6C235734AE00236F4B /* simply_msg.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C5235324520066812F /* simply_msg.c */; };
-		1401DC6D235734AE00236F4B /* simply_res.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005CB235324530066812F /* simply_res.c */; };
-		1401DC6E235734AE00236F4B /* simply_splash.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005B8235324520066812F /* simply_splash.c */; };
-		1401DC6F235734AE00236F4B /* simply_stage.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C3235324520066812F /* simply_stage.c */; };
-		1401DC70235734AE00236F4B /* simply_ui.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C6235324520066812F /* simply_ui.c */; };
-		1401DC71235734AE00236F4B /* simply_voice.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005B5235324520066812F /* simply_voice.c */; };
-		1401DC72235734AE00236F4B /* simply_wakeup.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C0235324520066812F /* simply_wakeup.c */; };
-		1401DC73235734AE00236F4B /* simply_window_stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005CC235324530066812F /* simply_window_stack.c */; };
-		1401DC74235734AE00236F4B /* simply_window.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005BA235324520066812F /* simply_window.c */; };
-		1401DC75235734AE00236F4B /* simply.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C1235324520066812F /* simply.c */; };
 		14469901234BF6F8000FA536 /* assert_module_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 14469900234BF6F8000FA536 /* assert_module_test.c */; };
 		14469907234BF907000FA536 /* allocate_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 14469906234BF907000FA536 /* allocate_module.c */; };
 		1446990A234BF9FC000FA536 /* libcmocka.0.7.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 14469909234BF9FC000FA536 /* libcmocka.0.7.0.dylib */; };
@@ -26,17 +14,11 @@
 		1446990E234BFAE3000FA536 /* assert_macro.c in Sources */ = {isa = PBXBuildFile; fileRef = 1446990D234BFAE3000FA536 /* assert_macro.c */; };
 		14469916234D1EA9000FA536 /* date_parser_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 14469915234D1EA9000FA536 /* date_parser_test.c */; };
 		14469917234D1EEC000FA536 /* date_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 14469911234D1C97000FA536 /* date_parser.c */; };
-		14AD4235234E586000EE2E9A /* string_helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD4234234E586000EE2E9A /* string_helpers.c */; };
 		14AD4236234E586000EE2E9A /* string_helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD4234234E586000EE2E9A /* string_helpers.c */; };
 		14AD4239234E596B00EE2E9A /* string_helpers_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD4237234E596B00EE2E9A /* string_helpers_test.c */; };
 		14AD423D234E597800EE2E9A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD423B234E597800EE2E9A /* main.c */; };
-		14AD4247234E667C00EE2E9A /* fabric_event_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD4246234E667C00EE2E9A /* fabric_event_info.c */; };
 		14AD4248234E667C00EE2E9A /* fabric_event_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD4246234E667C00EE2E9A /* fabric_event_info.c */; };
-		14AD4250234E9B9300EE2E9A /* vikki.c in Sources */ = {isa = PBXBuildFile; fileRef = 4969414FD76515E5DE32AD0D /* vikki.c */; };
-		14AD4251234E9DFE00EE2E9A /* date_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 14469911234D1C97000FA536 /* date_parser.c */; };
-		14E0E1802351193900661CC9 /* tiny_sscanf.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E0E17F2351193900661CC9 /* tiny_sscanf.c */; };
 		14E0E181235119CD00661CC9 /* tiny_sscanf.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E0E17F2351193900661CC9 /* tiny_sscanf.c */; };
-		14E0E188235120A800661CC9 /* factory_card.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E0E187235120A800661CC9 /* factory_card.c */; };
 		14E0E189235120A800661CC9 /* factory_card.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E0E187235120A800661CC9 /* factory_card.c */; };
 		CE4C440C2A77E786830D8D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9120B7B12BE5EDBF335F21C /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -433,24 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1401DC74235734AE00236F4B /* simply_window.c in Sources */,
-				1401DC73235734AE00236F4B /* simply_window_stack.c in Sources */,
-				1401DC71235734AE00236F4B /* simply_voice.c in Sources */,
-				1401DC6D235734AE00236F4B /* simply_res.c in Sources */,
-				1401DC6B235734AE00236F4B /* simply_menu.c in Sources */,
-				14E0E188235120A800661CC9 /* factory_card.c in Sources */,
-				14AD4251234E9DFE00EE2E9A /* date_parser.c in Sources */,
-				1401DC75235734AE00236F4B /* simply.c in Sources */,
-				1401DC6F235734AE00236F4B /* simply_stage.c in Sources */,
-				1401DC6A235734AE00236F4B /* simply_accel.c in Sources */,
-				1401DC72235734AE00236F4B /* simply_wakeup.c in Sources */,
-				1401DC70235734AE00236F4B /* simply_ui.c in Sources */,
-				14AD4247234E667C00EE2E9A /* fabric_event_info.c in Sources */,
-				14AD4235234E586000EE2E9A /* string_helpers.c in Sources */,
-				1401DC6C235734AE00236F4B /* simply_msg.c in Sources */,
-				1401DC6E235734AE00236F4B /* simply_splash.c in Sources */,
-				14AD4250234E9B9300EE2E9A /* vikki.c in Sources */,
-				14E0E1802351193900661CC9 /* tiny_sscanf.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +537,7 @@
 				HEADER_SEARCH_PATHS = (
 					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
 					"src/c/**",
+					"$(SRCROOT)/**",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -647,6 +612,7 @@
 				HEADER_SEARCH_PATHS = (
 					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include",
 					"src/c/**",
+					"$(SRCROOT)/**",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;

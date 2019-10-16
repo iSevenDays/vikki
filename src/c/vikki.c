@@ -50,7 +50,7 @@ static void dictation_session_callback(DictationSession *session, DictationSessi
 //	text_layer_set_text(s_text_layer, "Down");
 //}
 //
-static void click_config_provider(void *context) {
+//static void click_config_provider(void *context) {
 //	SimplyWindow *simplyWindow = context;
 //	Window *window = simplyWindow->window;
 //	window_set_click_config_provider_with_context(window, click_config_provider, simplyWindow);
@@ -58,7 +58,7 @@ static void click_config_provider(void *context) {
 //	window_single_click_subscribe(BUTTON_ID_SELECT, select_click_handler);
 	//window_single_click_subscribe(BUTTON_ID_UP, up_click_handler);
 	//window_single_click_subscribe(BUTTON_ID_DOWN, down_click_handler);
-}
+//}
 //
 //static void window_load(Window *window) {
 //	Layer *window_layer = window_get_root_layer(window);
@@ -135,12 +135,14 @@ void after_splash_shown(void* data) {
 
 	APP_LOG(APP_LOG_LEVEL_DEBUG, "Did show title & subtitle");
 }
-
+//#error test error
 bool handle_command(Simply *simply, Packet *packet) {
 	switch (packet->type) {
 		case CommandWindowHideEvent:
-			WindowHideEventPacket *cpacket = (WindowHideEventPacket*) &packet;
+			//WindowHideEventPacket p;
+			//WindowHideEventPacket *cpacket = (WindowHideEventPacket*) &packet;
 
+			//int x = "yes";
 			return true;
 		default:
 			return false;
