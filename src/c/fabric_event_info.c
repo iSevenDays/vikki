@@ -5,7 +5,7 @@
 //  Created by Anton Sokolchenko on 10/9/19.
 //
 
-#ifdef UNIT_TESTS
+#if defined(UNIT_TESTS) && !defined(TARGET_OS_SIMULATOR)
 #include <stdlib.h>
 #endif
 #include "fabric_event_info.h"

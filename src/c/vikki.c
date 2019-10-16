@@ -1,4 +1,9 @@
 #define SPLASH_LOGO
+
+//#if PBL_PLATFORM_TYPE_CURRENT == PlatformTypeBasalt
+//##include "src/resource_ids.auto.h"
+//#endif
+
 #include "vikki.h"
 #include "simply.h"
 #include "simply_accel.h"
@@ -11,6 +16,8 @@
 #include "simply_stage.h"
 #include "simply_window_stack.h"
 #include "simply_splash.h"
+
+
 
 //static Window *s_window;
 //static TextLayer *s_text_layer;
@@ -142,7 +149,6 @@ bool handle_command(Simply *simply, Packet *packet) {
 			//WindowHideEventPacket p;
 			//WindowHideEventPacket *cpacket = (WindowHideEventPacket*) &packet;
 
-			//int x = "yes";
 			return true;
 		default:
 			return false;

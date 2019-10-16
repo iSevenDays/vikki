@@ -6,7 +6,7 @@
 //
 
 #include "string_helpers.h"
-#ifdef UNIT_TESTS
+#if defined(UNIT_TESTS) && !defined(TARGET_OS_SIMULATOR)
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

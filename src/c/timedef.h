@@ -8,7 +8,7 @@
 #ifndef timedef_h
 #define timedef_h
 
-#ifdef UNIT_TESTS
+#if defined(UNIT_TESTS) && !defined(TARGET_OS_SIMULATOR)
 #include <time.h>
 #else
 #include <pebble.h>

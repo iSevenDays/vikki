@@ -8,7 +8,7 @@
 #ifndef date_parser_h
 #define date_parser_h
 
-#ifdef UNIT_TESTS
+#if defined(UNIT_TESTS) && !defined(TARGET_OS_SIMULATOR)
 #include "timedef.h"
 #include <string.h>
 #include <stdio.h>

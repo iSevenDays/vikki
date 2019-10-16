@@ -8,7 +8,7 @@
 #ifndef vikki_h
 #define vikki_h
 
-#ifdef UNIT_TESTS
+#if defined(UNIT_TESTS) && !defined(TARGET_OS_SIMULATOR)
 #include "timedef.h"
 #include "event_info.h"
 #else

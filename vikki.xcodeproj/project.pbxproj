@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,25 @@
 		14AD4248234E667C00EE2E9A /* fabric_event_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD4246234E667C00EE2E9A /* fabric_event_info.c */; };
 		14E0E181235119CD00661CC9 /* tiny_sscanf.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E0E17F2351193900661CC9 /* tiny_sscanf.c */; };
 		14E0E189235120A800661CC9 /* factory_card.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E0E187235120A800661CC9 /* factory_card.c */; };
+		14E8490A235770D600478647 /* simply_accel.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C7235324520066812F /* simply_accel.c */; };
+		14E8490B235770D600478647 /* simply_menu.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005BD235324520066812F /* simply_menu.c */; };
+		14E8490C235770D600478647 /* simply_msg.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C5235324520066812F /* simply_msg.c */; };
+		14E8490D235770D600478647 /* simply_res.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005CB235324530066812F /* simply_res.c */; };
+		14E8490E235770D600478647 /* simply_splash.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005B8235324520066812F /* simply_splash.c */; };
+		14E8490F235770D600478647 /* simply_stage.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C3235324520066812F /* simply_stage.c */; };
+		14E84910235770D600478647 /* simply_ui.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C6235324520066812F /* simply_ui.c */; };
+		14E84911235770D600478647 /* simply_voice.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005B5235324520066812F /* simply_voice.c */; };
+		14E84912235770D600478647 /* simply_wakeup.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C0235324520066812F /* simply_wakeup.c */; };
+		14E84913235770D600478647 /* simply_window_stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005CC235324530066812F /* simply_window_stack.c */; };
+		14E84914235770D600478647 /* simply_window.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005BA235324520066812F /* simply_window.c */; };
+		14E84915235770D600478647 /* simply.c in Sources */ = {isa = PBXBuildFile; fileRef = 144005C1235324520066812F /* simply.c */; };
+		14E84916235770D600478647 /* date_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 14469911234D1C97000FA536 /* date_parser.c */; };
+		14E84917235770D600478647 /* string_helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD4234234E586000EE2E9A /* string_helpers.c */; };
+		14E84918235770D600478647 /* fabric_event_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 14AD4246234E667C00EE2E9A /* fabric_event_info.c */; };
+		14E84919235770D600478647 /* vikki.c in Sources */ = {isa = PBXBuildFile; fileRef = 4969414FD76515E5DE32AD0D /* vikki.c */; };
+		14E8491A235770D600478647 /* tiny_sscanf.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E0E17F2351193900661CC9 /* tiny_sscanf.c */; };
+		14E8491B235770D600478647 /* factory_card.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E0E187235120A800661CC9 /* factory_card.c */; };
+		14E8491C23578C0100478647 /* vikki.c in Sources */ = {isa = PBXBuildFile; fileRef = 4969414FD76515E5DE32AD0D /* vikki.c */; };
 		CE4C440C2A77E786830D8D8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9120B7B12BE5EDBF335F21C /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +255,7 @@
 		42A5697B0A5AC894ADA11C05 /* c */ = {
 			isa = PBXGroup;
 			children = (
+				4969414FD76515E5DE32AD0D /* vikki.c */,
 				144005DA235324570066812F /* util */,
 				144005B4235324330066812F /* simply */,
 				14469910234D1C97000FA536 /* date_parser.h */,
@@ -246,7 +266,6 @@
 				14AD4245234E667C00EE2E9A /* fabric_event_info.h */,
 				14AD4246234E667C00EE2E9A /* fabric_event_info.c */,
 				14AD4249234E83E000EE2E9A /* timedef.h */,
-				4969414FD76515E5DE32AD0D /* vikki.c */,
 				14AD424A234E844C00EE2E9A /* vikki.h */,
 				14E0E17E2351193900661CC9 /* tiny_sscanf.h */,
 				14E0E17F2351193900661CC9 /* tiny_sscanf.c */,
@@ -362,7 +381,7 @@
 				};
 			};
 			buildConfigurationList = 42CEF78D0983FFBD4854BE15 /* Build configuration list for PBXProject "vikki" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -399,6 +418,7 @@
 				14469917234D1EEC000FA536 /* date_parser.c in Sources */,
 				14469907234BF907000FA536 /* allocate_module.c in Sources */,
 				1446990C234BFAD1000FA536 /* assert_macro_test.c in Sources */,
+				14E8491C23578C0100478647 /* vikki.c in Sources */,
 				1446990E234BFAE3000FA536 /* assert_macro.c in Sources */,
 				14E0E189235120A800661CC9 /* factory_card.c in Sources */,
 				14469916234D1EA9000FA536 /* date_parser_test.c in Sources */,
@@ -415,25 +435,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14E849022357704800478647 /* simply_window_stack.c in Sources */,
-				14E849032357704800478647 /* simply_window.c in Sources */,
-				14E848FE2357704800478647 /* simply_stage.c in Sources */,
-				14E848FA2357704800478647 /* simply_menu.c in Sources */,
-				14E849002357704800478647 /* simply_voice.c in Sources */,
-				14E848FF2357704800478647 /* simply_ui.c in Sources */,
-				14E849052357704800478647 /* date_parser.c in Sources */,
-				14E849092357704800478647 /* factory_card.c in Sources */,
-				14E848F92357704800478647 /* simply_accel.c in Sources */,
-				14E848F72357701400478647 /* vikki.c in Sources */,
-				14E848FB2357704800478647 /* simply_msg.c in Sources */,
-				14E849062357704800478647 /* string_helpers.c in Sources */,
-				14E849082357704800478647 /* tiny_sscanf.c in Sources */,
-				14E848FD2357704800478647 /* simply_splash.c in Sources */,
-				14E849012357704800478647 /* simply_wakeup.c in Sources */,
-				14E849042357704800478647 /* simply.c in Sources */,
-				14E848FC2357704800478647 /* simply_res.c in Sources */,
-				145573CA2357672F00DFCC60 /* main.m in Sources */,
-				14E849072357704800478647 /* fabric_event_info.c in Sources */,
+				14E84910235770D600478647 /* simply_ui.c in Sources */,
+				14E8490D235770D600478647 /* simply_res.c in Sources */,
+				14E84913235770D600478647 /* simply_window_stack.c in Sources */,
+				14E84911235770D600478647 /* simply_voice.c in Sources */,
+				14E8491B235770D600478647 /* factory_card.c in Sources */,
+				14E8490C235770D600478647 /* simply_msg.c in Sources */,
+				14E84912235770D600478647 /* simply_wakeup.c in Sources */,
+				14E84919235770D600478647 /* vikki.c in Sources */,
+				14E84917235770D600478647 /* string_helpers.c in Sources */,
+				14E8490E235770D600478647 /* simply_splash.c in Sources */,
+				14E84916235770D600478647 /* date_parser.c in Sources */,
+				14E84915235770D600478647 /* simply.c in Sources */,
+				14E84918235770D600478647 /* fabric_event_info.c in Sources */,
+				14E8491A235770D600478647 /* tiny_sscanf.c in Sources */,
+				14E8490B235770D600478647 /* simply_menu.c in Sources */,
+				14E8490F235770D600478647 /* simply_stage.c in Sources */,
+				14E8490A235770D600478647 /* simply_accel.c in Sources */,
+				14E84914235770D600478647 /* simply_window.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +576,7 @@
 					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include/**",
 					"src/c/**",
 					"build/include/**",
-					"build/basalt/src/**",
+					"build/basalt/**",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -633,7 +652,7 @@
 					"/Users/seven/Library/Application\\ Support/Pebble\\ SDK/SDKs/4.3/sdk-core/pebble/basalt/include/**",
 					"src/c/**",
 					"build/include/**",
-					"build/basalt/src/**",
+					"build/basalt/**",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;

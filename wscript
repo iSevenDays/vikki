@@ -8,6 +8,8 @@ import os.path
 top = '.'
 out = 'build'
 
+import os
+current_dir = os.getcwd()
 
 def options(ctx):
     ctx.load('pebble_sdk')
@@ -25,8 +27,9 @@ def configure(ctx):
                       '-Wno-address',
                       '-Wno-type-limits',
                       '-Wno-missing-field-initializers',
-                      #'-I/Users/seven/projects/pebble-apps/vikki/src/c/simply']
+                      '-I../build/basalt',
                       '-I../src/c/simply']
+    
     ctx.load('pebble_sdk')
     for _, env in ctx.all_envs.iteritems():
         if '-std=c99' in env.CFLAGS:
